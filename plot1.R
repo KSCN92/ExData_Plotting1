@@ -1,5 +1,5 @@
 #read data
-a <- grep("1/2/2007", readLines("household_power_consumption.txt"))[1]
+a <- grep("1/2/2007", readLines("household_power_consumption.txt"))[1]-1
 b <- grep("3/2/2007", readLines("household_power_consumption.txt"))[1]
 subsetdata <- read.table('household_power_consumption.txt', sep = ';', na.strings = '?', skip = a, nrows = b-a-1)
 head <- read.table("household_power_consumption.txt", header = FALSE, nrows = 1,sep = ';')
